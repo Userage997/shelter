@@ -131,4 +131,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Консольное приветствие (опционально)
     console.log('%c🔐 shelter | Сносер, Осинтер, Сватер', 'color: #ff4444; font-size: 16px; font-weight: bold;');
     console.log('%cПриветствую на сайте. Для связи: @xably', 'color: #aaa;');
+    console.log('%cСайт создан: @metstyle', 'color: #8844ff; font-weight: bold;');
 });
