@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shelter | Сносер, Осинтер, Сватер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
+</head>
+<body>
+    <!-- Экран приветствия -->
+    <section class="screen" id="welcome-screen">
+        <div class="container">
+            <h1 class="welcome-text" id="welcome-text">Здравствуйте. Я shelter, добро пожаловать на сайт.</h1>
+        </div>
+    </section>
+
+    <!-- Экран главного меню -->
+    <section class="screen hidden" id="menu-screen">
+        <div class="container">
+            <h2 class="specialties-title"><span class="highlight">Мои специальности</span>: сносер, осинтер, сватер</h2>
+            
+            <div class="buttons-container">
+                <button class="menu-btn price-btn" id="price-btn">
+                    <i class="fas fa-tags"></i> Прайс
+                </button>
+                <button class="menu-btn project-btn" id="project-btn">
+                    <i class="fas fa-rocket"></i> Проект
+                </button>
+                <button class="menu-btn contact-btn" id="contact-btn">
+                    <i class="fas fa-paper-plane"></i> Связь со мной
+                </button>
+            </div>
+
+            <div class="footer-note">
+                <p><i class="fas fa-star"></i> Оплата: NFT / Звёзды / Рубли / TON / USD</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Экран прайса -->
+    <section class="screen hidden" id="price-screen">
+        <div class="container">
+            <div class="price-header">
+                <h2><i class="fas fa-file-invoice-dollar"></i> Прайс-лист</h2>
+                <button class="back-btn" id="back-from-price">
+                    <i class="fas fa-arrow-left"></i> Назад
+                </button>
+            </div>
+
+            <div class="price-category">
+                <h3><i class="fas fa-graduation-cap"></i> Основные услуги</h3>
+                <div class="price-item">
+                    <span class="service">Осинт</span>
+                    <span class="price">700₽ / 7$ / 700 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Ксинт</span>
+                    <span class="price">1к₽ / 10$ / 1000 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Донос</span>
+                    <span class="price">1к₽ / 10$ / 1000 звёзд</span>
+                </div>
+            </div>
+
+            <div class="price-category">
+                <h3><i class="fas fa-chalkboard-teacher"></i> Обучение</h3>
+                <div class="price-item">
+                    <span class="service">Обучение осинту</span>
+                    <span class="price">3к₽ / 30$ / 2000 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Обучение ксинту</span>
+                    <span class="price">4к₽ / 40$ / 3500 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Обучение сносу</span>
+                    <span class="price">1к₽ / 10$ / 1000 звёзд</span>
+                </div>
+                <div class="price-item special">
+                    <span class="service">Обучение анонимности (в подарок при обучении)</span>
+                    <span class="price">500₽ / 5$ / 500 звёзд</span>
+                </div>
+            </div>
+
+            <div class="price-category">
+                <h3><i class="fas fa-trash-alt"></i> Снос</h3>
+                <div class="price-item">
+                    <span class="service">Снос аккаунта</span>
+                    <span class="price">500₽ / 5$ / 500 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Снос ТГК</span>
+                    <span class="price">600₽ / 6$ / 600 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Снос чата</span>
+                    <span class="price">400₽ / 4$ / 400 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Снос ТГК+чат+акк</span>
+                    <span class="price">1300₽ / 13$ / 1300 звёзд</span>
+                </div>
+                <p class="note"><i class="fas fa-info-circle"></i> Цена сноса зависит от отлеги</p>
+            </div>
+
+            <div class="price-category">
+                <h3><i class="fas fa-laptop-code"></i> Разработка</h3>
+                <div class="price-item">
+                    <span class="service">Сделать программу</span>
+                    <span class="price">7к₽ / 70$ / 7к звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Написать код</span>
+                    <span class="price">6к₽ / 60$ / 6к звёзд</span>
+                </div>
+                <p class="note"><i class="fas fa-exclamation-triangle"></i> Перед заказом опишите, какую именно надо и с чего будете запускать софт</p>
+            </div>
+
+            <div class="price-category">
+                <h3><i class="fas fa-shield-alt"></i> Деф (Защита)</h3>
+                <div class="price-item">
+                    <span class="service">Разовый</span>
+                    <span class="price">100₽ / 1$ / 100 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Неделя</span>
+                    <span class="price">200₽ / 2$ / 200 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Месяц</span>
+                    <span class="price">400₽ / 4$ / 400 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Пол года</span>
+                    <span class="price">500₽ / 5$ / 500 звёзд</span>
+                </div>
+                <div class="price-item">
+                    <span class="service">Год</span>
+                    <span class="price">600₽ / 6$ / 600 звёзд</span>
+                </div>
+                <div class="price-item special">
+                    <span class="service">Навсегда</span>
+                    <span class="price">1к₽ / 10$ / 1000 звёзд</span>
+                </div>
+            </div>
+
+            <div class="price-info">
+                <h4><i class="fas fa-star-of-life"></i> Что входит в деф:</h4>
+                <p><strong>Обычный деф:</strong> защита от киберугроз, осинт</p>
+                <p><strong>Деф навсегда:</strong> защита от свата, защита от киберугроз, снос и пробив, заход в КФ для решения ситуации + деф друзей и родных + рес вашего аккаунта который снесли или вашего знакомого, защита от фишинг ссылок, защита от взлома и т.д. Если ваш аккаунт украли и вы приобрели деф навсегда - помогу вернуть (зависит от поддержки).</p>
+                <p><i class="fas fa-balance-scale"></i> Перед тем как просить меня дефать, собирайте доказательства, что вы правы в той или иной ситуации. Если вы не правы, то я не буду дефать вас! Могу зайти в КФ и решить вопрос.</p>
+                <p><i class="fas fa-comment-alt"></i> Если есть вопросы, пишите в ЛС.</p>
+                <p class="contact-link"><i class="fab fa-telegram"></i> Связь со мной: <a href="https://t.me/xably" target="_blank">@xably</a></p>
+                <p><i class="fas fa-mobile-alt"></i> Оплата в звёздах: уточняйте ваше устройство (Android/iOS) для подбора цены, скидывайте цену на звёзды сразу.</p>
+                <p class="final-note"><i class="fas fa-heart"></i> Всех обнял, спасибо за понимание ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
