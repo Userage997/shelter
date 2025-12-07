@@ -44,41 +44,99 @@ body::before {
 .creator-btn {
     position: fixed;
     top: 20px;
-    right: 20px;
-    background: linear-gradient(145deg, rgba(0, 0, 0, 0.9), rgba(34, 34, 34, 0.9));
-    color: #8844ff;
-    border: 1px solid #8844ff;
-    padding: 10px 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.9), rgba(218, 165, 32, 0.9));
+    color: #000;
+    border: 2px solid #ffd700;
+    padding: 12px 25px;
     border-radius: 30px;
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
     text-decoration: none;
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4),
+                0 0 15px rgba(255, 215, 0, 0.3);
     backdrop-filter: blur(5px);
-    animation: slideInRight 0.5s ease-out 0.5s both;
+    animation: slideInDown 0.6s ease-out 0.3s both;
+    min-width: 200px;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .creator-btn:hover {
-    background: linear-gradient(145deg, rgba(136, 68, 255, 0.2), rgba(0, 0, 0, 0.9));
-    color: #aa88ff;
-    border-color: #aa88ff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(136, 68, 255, 0.4);
+    background: linear-gradient(145deg, rgba(255, 223, 0, 0.95), rgba(255, 215, 0, 0.95));
+    color: #000;
+    border-color: #ffff00;
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6),
+                0 0 20px rgba(255, 255, 0, 0.4);
 }
 
 .creator-btn i {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    color: #000;
 }
 
-@keyframes slideInRight {
-    from { opacity: 0; transform: translateX(30px); }
-    to { opacity: 1; transform: translateX(0); }
+@keyframes slideInDown {
+    from { 
+        opacity: 0; 
+        transform: translateX(-50%) translateY(-30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(-50%) translateY(0); 
+    }
+}
+
+/* Анимация пульсации для кнопки создателя */
+@keyframes pulseGold {
+    0%, 100% { 
+        box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4),
+                    0 0 15px rgba(255, 215, 0, 0.3);
+    }
+    50% { 
+        box-shadow: 0 5px 25px rgba(255, 215, 0, 0.6),
+                    0 0 20px rgba(255, 255, 0, 0.5);
+    }
+}
+
+.creator-btn {
+    animation: slideInDown 0.6s ease-out 0.3s both,
+               pulseGold 2s ease-in-out infinite;
+}
+
+/* Адаптивность для кнопки создателя */
+@media (max-width: 768px) {
+    .creator-btn {
+        top: 15px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-width: 180px;
+    }
+    
+    .creator-btn i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .creator-btn {
+        top: 10px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        min-width: 160px;
+    }
+    
+    .creator-btn i {
+        font-size: 0.9rem;
+    }
 }
 
 /* Контейнеры и экраны */
